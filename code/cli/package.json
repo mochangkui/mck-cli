@@ -20,8 +20,8 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
-    "@mck-cli/log": "^1.0.0",
     "@mck-cli/get-npm-info": "^1.0.0",
+    "@mck-cli/log": "^1.0.0",
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
     "import-local": "^3.1.0",
