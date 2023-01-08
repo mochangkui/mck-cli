@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = utils;
+module.exports = index;
 
-function utils() {
+function index() {
     return "Hello from utils";
 }

@@ -12,6 +12,9 @@
     "lerna": "^6.1.0"
   },
   "workspaces": [
-    "packages/*"
+    "code/*",
+    "commands/*",
+    "models/*",
+    "utils/*"
   ]
 }

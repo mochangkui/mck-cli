@@ -1,2 +1,4 @@
 node_modules/
-packages/**/node_modules
+code/**/node_modules/
+code/**/__test__/
+lerna-debug.log
