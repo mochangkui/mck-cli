@@ -3,7 +3,7 @@
 module.exports = core;
 
 const path = require('path')
-// require()可以解析.js、.json、.node，如果是其他格式文件（.txt、.md）等将默认通过js进行解析
+// require()可以解析.js、.json、.node，如果是其他格式文件（.txt、.md等）将默认通过js进行解析
 const pkg = require('../package.json')
 // 封装的npmlog库
 const log = require('@mck-cli/log')
