@@ -64,6 +64,7 @@ function checkUserHome () {
 
 // 检查参数
 function checkInputArgs () {
+    // minimist用于解析命令行参数
     const minimist = require('minimist')
     const args = minimist(process.argv.slice(2))
     checkDebug(args)

@@ -1,6 +1,7 @@
 'use strict';
 
 const axios = require('axios')
+// 拼接出常见格式的url地址
 const urlJoin = require('url-join')
 const semver = require('semver')
 
@@ -11,7 +12,6 @@ function getNpmInfo(npmName, registry) {
     }
     const registryUrl = registry || getDefaultRegistry()
     const npmInfoUrl = urlJoin(registryUrl, npmName)
-    console.log(npmInfoUrl)
     return axios.get(npmInfoUrl).then((res) => {
         if (res.status === 200) {
             return res.data
@@ -23,7 +23,7 @@ function getNpmInfo(npmName, registry) {
 }
 
 // 获取npm源
-function getDefaultRegistry (isOriginal = false) {
+function getDefaultRegistry (isOriginal = true) {
     return isOriginal ? 'http://registry.npmjs.org' : 'http://registry.npm.taobao.org'
 }
 
@@ -40,7 +40,7 @@ async function getNpmVersions (npmName, registry) {
 // 获取大于当前版本的所有版本号
 function getSemverVersions (baseVersion, versions) {
     return versions
-        .filter((version) => semver.satisfies(version, `^${baseVersion}`))
+        .filter((version) => semver.satisfies(version, `>${baseVersion}`))
         .sort((a, b) => {
             if (semver.gt(b, a)) {
                 return 1
