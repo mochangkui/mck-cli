@@ -90,7 +90,6 @@ function checkEnv () {
         })
     }
     createDefaultConfig()
-    console.log(process.env.CLI_HOME_PATH)
 }
 function createDefaultConfig () {
     const cliConfig = {
